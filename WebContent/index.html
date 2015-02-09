@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Watson Hello World!</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head>
+<body>
+
+	<h3>Watson Relationship Extraction Hello World</h3>
+	
+	<textarea id="theText" rows="10" cols="80">Barack Obama is the president of the United States.</textarea>
+
+	<br>
+	
+	<button type="button" onClick="buttonClickGet('api/vcapprops')">Display Connection Properties</button>
+	<button type="button" onClick="buttonClickPost('api/rx')">Display Raw Extraction</button>
+	<button type="button" onClick="buttonClickPost('api/processed')">Display Processed Extraction</button>
+	
+	<br>
+	
+	<pre id="resultsPre"></pre>
+
+
+	<script type="text/javascript" src="index.js"></script>
+	
+	<script type="text/javascript">
+		function buttonClickGet(servicePath) {
+			console.log(servicePath);
+			
+			var results = document.getElementById('resultsPre');
+					
+			xhrGet(servicePath, function(responseText) {
+				results.innerHTML = responseText;
+			}, function(err) {	
+				console.log(err);
+			});
+		}
+		
+		
+		function buttonClickPost(servicePath) {
+			console.log(servicePath);
+			
+			var theText = document.getElementById("theText");
+			var results = document.getElementById('resultsPre');
+
+			xhrPost(servicePath, theText.value, function(responseText){
+				results.innerHTML = encodeHTML(responseText);		
+			}, function(err){
+				console.log(err);
+			});		
+		}
+		
+		
+		// Encode HTML Characters
+		function encodeHTML(string) {
+		    return string.replace(/&/g, '&amp;')
+               .replace(/</g, '&lt;')
+               .replace(/>/g, '&gt;')
+               .replace(/"/g, '&quot;')
+               .replace(/'/g, '&apos;');
+		}
+		
+	</script>	
+	
+</body>
+</html>

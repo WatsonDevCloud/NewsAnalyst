@@ -6,5 +6,23 @@
 			<attribute name="owner.project.facets" value="java"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/commons-codec-1.6.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/commons-logging-1.2.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/fluent-hc-4.3.4.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/httpclient-4.3.4.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/httpcore-4.3.2.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/java-property-utils-1.9.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/jdom-2.0.2.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/slf4j-api-1.7.7.jar"/>
+	<classpathentry kind="lib" path="dep-jar/com.ibm.websphere.appserver.api.json_1.0.2.jar"/>
+	<classpathentry kind="lib" path="dep-jar/com.ibm.ws.javaee.jaxrs.1.1_1.0.1.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/cors-filter-1.8.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/geocoder-java-0.16.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/gson-2.3.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/rome-1.5.0.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/rome-fetcher-1.5.0.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/rome-utils-1.5.0.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/spymemcached-2.10.3.jar"/>
+	<classpathentry kind="lib" path="dep-jar/com.ibm.ws.javaee.servlet.3.0_1.0.2.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>

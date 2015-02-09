@@ -1,0 +1,10 @@
+applications:
+- services:
+  - Relationship Extraction-os
+  disk_quota: 1024M
+  host: relex-test
+  name: relex-test
+  path: webStarterApp.war
+  domain: mybluemix.net
+  instances: 1
+  memory: 512M
