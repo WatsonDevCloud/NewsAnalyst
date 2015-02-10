@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Relationship Extraction Tester</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head>
+<body>
+
+	<h3>Enter text to analyze:</h3>
+	<textarea id="theText" rows="20" cols="100"></textarea>
+	<br>
+	<button type="button" onclick="getResults()">Run Relationship Extraction</button>
+	<br>
+	<h3>Results:</h3>
+	<pre id="theResults"></pre>
+	
+
+	<script type="text/javascript" src="js/tester.js"></script>
+	
+	<script>
+		function xhrPost(url, text, callback, errback) {
+			console.log("text: " + text);
+			
+			var data = "text=" + text;
+			
+			var xhr = new createXHR();
+			xhr.open("POST", url, true);
+			xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+			xhr.setRequestHeader("Content-length", data.length);
+			xhr.setRequestHeader("Connection", "close");
+			xhr.onreadystatechange = function(){
+				if(xhr.readyState == 4){
+					if(xhr.status == 200){
+						callback(xhr.responseText);
+					}else{
+						errback('service not available');
+					}
+				}
+			};
+			xhr.timeout = 60000;
+			xhr.ontimeout = errback;
+			xhr.send(data);
+		}
+	
+	
+
+		function getResults() {
+			var theTextEl = document.getElementById("theText");
+
+			xhrPost("api/tester", theTextEl.value, function(responseText){
+				var theResultsEl = document.getElementById("theResults");
+				theResultsEl.innerHTML = responseText;		
+			}, function(err){
+				console.log(err);
+			});		
+		}
+	
+	</script>
+	
+</body>
+</html>

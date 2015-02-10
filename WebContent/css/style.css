@@ -1,0 +1,46 @@
+html {
+	height: 100%
+}
+
+body {
+	height: 100%;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	overflow-y: hidden;
+}
+
+#container {
+	height: 100%;
+	width: 100%;
+}
+
+#container>* {
+	position: absolute;
+	border: 0;
+}
+
+#news-data {
+	color: #8CC63F;
+	background: #F5F5F5;
+	overflow-y: auto;
+}
+
+#news-data table {
+	width: 100%;
+	border-collapse: collapse;
+	color: #929497;
+}
+
+#news-data td {
+	border: 1px solid #929497;
+	margin: 0;
+}
+
+#news-data * {
+	margin: 0;
+	-webkit-margin-before: 0;
+	-webkit-margin-after: 0;
+	-webkit-margin-start: 0px;
+	-webkit-margin-end: 0px;
+}

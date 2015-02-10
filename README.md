@@ -1,13 +1,8 @@
-NewsAnalyst
-===========
+# Watson NewsAnalyst Lab
 
-Lin, do you see this update?
-----------------------------
+###InterConnect 2015 Watson developer cloud course. 
 
-
-InterConnect2015 Watson developer cloud course. 
-
-Bruce Slawson & Lin Sharpe
+See the docs directory for more info.
 
 
 
