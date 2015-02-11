@@ -2,14 +2,11 @@ package com.ibm.watson.newsanalyst;
 
 import java.util.Locale;
 
-//import android.location.Location;
-
-
-
 
 /**
  * 
- * @author Bruce Slawson <bruce.slawson@gmail.com>
+ * Various utility methods for processing geolocation
+ * data.
  *
  */
 public class GeoUtils {
@@ -46,33 +43,6 @@ public class GeoUtils {
 		
 		return distance;
 	}
-
-	
-	/**
-	 * Calculates the distance between two locations (latitudes and longitudes).
-	 * 
-	 * @param lat1 Location 1 latitude
-	 * @param lon1 Location 1 longitude
-	 * @param lat2 Location 2 latitude
-	 * @param lon2 Location 2 longitude
-	 * @param unit Unit of distance. Miles, kilometers, or nautical miles.
-	 * @return Distance between location 1 and location 2.
-	 */
-//	public static double distance2(double lat1, double lon1, double lat2, double lon2, Units unit) {
-//		float[] results = new float[3];
-//		Location.distanceBetween(lat1, lon1, lat2, lon2, results);
-//		double distance = results[0] / 1000.0; // kilometers
-//		
-//		if (unit == Units.MILES) {
-//			distance = distance * 0.621371;
-//		} else if (unit == Units.NAUTICAL_MILES) {
-//			distance = distance * 0.539957;
-//		}
-//		
-//		return distance;
-//	}
-
-	
 	
 	
 	/**
@@ -89,6 +59,7 @@ public class GeoUtils {
 	public static double milesToKilometers(double miles) {	
 		return (miles / 0.621371);
 	}
+	
 	
 	public static double kilometersToMiles(double kilometers) {	
 		return (kilometers * 0.621371);

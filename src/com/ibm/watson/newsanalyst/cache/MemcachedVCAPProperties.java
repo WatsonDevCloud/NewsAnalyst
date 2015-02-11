@@ -5,6 +5,13 @@ import java.io.IOException;
 import com.ibm.json.java.JSONArray;
 import com.ibm.json.java.JSONObject;
 
+
+/**
+ * 
+ * Reads the MemcachedL  hosts and credentials from the Bluemix
+ * environment variable VCAP_SERVICES.
+ * 
+ */
 public class MemcachedVCAPProperties {
 	
 	private static final String SERVICE_NAME = "memcachedcloud";

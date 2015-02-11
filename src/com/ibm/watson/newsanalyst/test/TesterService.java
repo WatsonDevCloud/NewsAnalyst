@@ -1,4 +1,4 @@
-package com.ibm.watson.newsanalyst;
+package com.ibm.watson.newsanalyst.test;
 
 
 import java.io.PrintWriter;
@@ -10,6 +10,8 @@ import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 
+import com.ibm.watson.newsanalyst.RelExAPI;
+import com.ibm.watson.newsanalyst.VCAPProperties;
 import com.ibm.watson.relexbind.Marshaller;
 import com.ibm.watson.relexbind.RelExUtil;
 import com.ibm.watson.relexbind.Rep;

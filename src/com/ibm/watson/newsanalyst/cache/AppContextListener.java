@@ -6,9 +6,15 @@ import java.util.TimerTask;
 import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
 
+
+/**
+ * 
+ * Creates a timer to updating the news cache.
+ *
+ */
 public class AppContextListener implements ServletContextListener {
 	
-	private long TIMER_PERIOD = 10 * 60 * 1000; // 10 minutes
+	private static long TIMER_PERIOD = 10 * 60 * 1000; // 10 minutes
 
 	
 	@Override
@@ -21,8 +27,8 @@ public class AppContextListener implements ServletContextListener {
 
 	@Override
 	public void contextInitialized(ServletContextEvent servletContextEvent) {
+		
 		System.out.println("News Cache update timer initialized to a period of " + TIMER_PERIOD + "ms");
-
 		TimerTask newsTimer = new NewsTimerTask();
 
 		Timer timer = new Timer();

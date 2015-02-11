@@ -15,6 +15,11 @@ import org.apache.http.entity.ContentType;
 import org.apache.http.message.BasicNameValuePair;
 
 
+/**
+ * 
+ * The app interface to the Watson Relationship service.
+ *
+ */
 public class RelExAPI {
 
 	

@@ -4,13 +4,6 @@ import java.io.IOException;
 import java.util.Date;
 import java.util.concurrent.TimeUnit;
 
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-import com.google.gson.JsonSyntaxException;
-import com.ibm.watson.newsanalyst.News;
-import com.ibm.watson.newsanalyst.NewsBean;
-import com.ibm.watson.newsanalyst.NewsResource;
-
 import net.spy.memcached.AddrUtil;
 import net.spy.memcached.ConnectionFactoryBuilder;
 import net.spy.memcached.ConnectionFactoryBuilder.Protocol;
@@ -18,6 +11,19 @@ import net.spy.memcached.MemcachedClient;
 import net.spy.memcached.auth.AuthDescriptor;
 import net.spy.memcached.auth.PlainCallbackHandler;
 
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import com.google.gson.JsonSyntaxException;
+import com.ibm.watson.newsanalyst.News;
+import com.ibm.watson.newsanalyst.NewsBean;
+
+
+/**
+ * 
+ * The methods for reading from and writing to the News cache which is 
+ * hosted by Memcached.
+ *
+ */
 public class NewsCache {
 
 		private static final String NEWS_CACHE_KEY = "NEWS_CACHE_KEY";
@@ -102,8 +108,7 @@ public class NewsCache {
 			return mc;
 		}
 		
-		
-		
+
 		/**
 		 * Read the news from the cache
 		 * 

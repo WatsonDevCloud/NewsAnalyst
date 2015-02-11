@@ -10,11 +10,15 @@ import com.rometools.fetcher.FetcherException;
 import com.rometools.fetcher.impl.FeedFetcherCache;
 import com.rometools.fetcher.impl.HashMapFeedInfoCache;
 import com.rometools.fetcher.impl.HttpURLFeedFetcher;
-import com.rometools.rome.feed.synd.SyndContent;
 import com.rometools.rome.feed.synd.SyndEntry;
 import com.rometools.rome.feed.synd.SyndFeed;
 import com.rometools.rome.io.FeedException;
 
+/**
+ * 
+ * An RSS feed reader for AP and Reuters news feeds.
+ *
+ */
 public class RSSReader {
 	
 	public static final String AP_RSS_URL_WORLD_OLD = "http://hosted.ap.org/lineups/WORLDHEADS.rss?SITE=AP&SECTION=HOME";

@@ -22,34 +22,27 @@ import com.rometools.rome.feed.synd.SyndContent;
 import com.rometools.rome.feed.synd.SyndEntry;
 
 
-
+/**
+ * 
+ * Provides the majority of the integration for this app. 
+ *
+ */
 public class News {	
 	
-	public News() {
-		this.relexConnectionProps = new VCAPProperties("relationship_extraction"); 
-	}
-	
-	
-	
 	/**
-	 * Grab the location of the news item from a list of locations mentioned in the article.
-	 *   
-	 * @param locationEntities
-	 * @return
+	 * Constructor
 	 */
-	private String makeLocationName(List<Entity> locationEntities) {
-		String locName = "NO_LOCATION_FOUND";
-		if(locationEntities != null && locationEntities.size()  > 0) {
-			locName = RelExUtil.getDisplayName(locationEntities.get(0));
-		}		
-		System.out.println(locName);
-		return locName;
+	public News() {
+		
+		// Get connection info and credentials for the Watson Relationship Extraction service
+		this.relexConnectionProps = new VCAPProperties("relationship_extraction"); 
+		
 	}
 	
-	
+		
 	
 	/**
-	 * Get the Relationship Extraction data from the RSS news entry.
+	 * Gets the Relationship Extraction data from the RSS news entry.
 	 * 
 	 * @param entry 
 	 * @param cleanDesc Cleans a Rueters news article.  
@@ -93,7 +86,11 @@ public class News {
 	
 	/**
 	 * 
-	 * @return
+	 * Gets the news items from RSS, runs the items through Watson Relationship
+	 * Extraction service and Google Geolocation service, then converts the 
+	 * results to JSON.  
+	 * 
+	 * @return JSON used by the app API
 	 */
 	public String readRssAndMakeJson() {
 		// Get news from rss feeds
@@ -182,7 +179,15 @@ public class News {
 	
 	
 	
-	
+	/**
+	 * Utility to update a news item with the distance from a given latitude
+	 * and longitude.
+	 * 
+	 * @param nmb
+	 * @param lat
+	 * @param lng
+	 * @return
+	 */
 	protected static NewsBean setDistance(NewsBean nmb, String lat, String lng) {
 		List<NewsItem> newsItems = nmb.getNewsItems();
 		double closestNews = Long.MAX_VALUE;
@@ -225,7 +230,24 @@ public class News {
 	
 	
 	
+	/**
+	 * Utility to grab the location of the news item from a list of locations mentioned in the article.
+	 *   
+	 * @param locationEntities
+	 * @return
+	 */
+	private static String makeLocationName(List<Entity> locationEntities) {
+		String locName = "NO_LOCATION_FOUND";
+		if(locationEntities != null && locationEntities.size()  > 0) {
+			locName = RelExUtil.getDisplayName(locationEntities.get(0));
+		}		
+		System.out.println(locName);
+		return locName;
+	}
 	
+	
+	
+	// Connection info and credentials for the Watson Relationship Extraction service
 	private VCAPProperties relexConnectionProps;
 	
 }

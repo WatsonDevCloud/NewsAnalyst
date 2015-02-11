@@ -5,6 +5,11 @@ import java.io.IOException;
 import com.ibm.json.java.JSONArray;
 import com.ibm.json.java.JSONObject;
 
+
+/**
+ * Reads the Watson service URL and credentials from the Bluemix
+ * environment variable VCAP_SERVICES.
+ */
 public class VCAPProperties {
 	
 	private String serviceName = "<service name>";
