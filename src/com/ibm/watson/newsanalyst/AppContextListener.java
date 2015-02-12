@@ -1,10 +1,12 @@
-package com.ibm.watson.newsanalyst.cache;
+package com.ibm.watson.newsanalyst;
 
 import java.util.Timer;
 import java.util.TimerTask;
 
 import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
+
+import com.ibm.watson.newsanalyst.cache.NewsCache;
 
 
 /**

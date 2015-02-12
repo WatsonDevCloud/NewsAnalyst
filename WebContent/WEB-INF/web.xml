@@ -15,7 +15,7 @@
   </servlet-mapping>
     
   <listener>
-    <listener-class>com.ibm.watson.newsanalyst.cache.AppContextListener</listener-class>
+    <listener-class>com.ibm.watson.newsanalyst.AppContextListener</listener-class>
   </listener>
   
 
