@@ -113,7 +113,7 @@ function getMap(location) {
  * 			the map to put the markers on.
  */
 function getAlerts(location, map) {
-	var url = "http://newsanalyst.mybluemix.net/api/news?" + encodeURI("lat=" + location.lat + "&lng=" + location.lng);
+	var url = "/api/news?" + encodeURI("lat=" + location.lat + "&lng=" + location.lng);
 	var xhr = createCORSRequest('GET', url);
 	if (!xhr) {
 		throw new Error('CORS not supported');
