@@ -292,6 +292,7 @@ function addListeners(marker) {
 function placeNews(url) {
 	var news_container = document.getElementById("news-article");
 	news_container.src = url;
+  document.domain = url;
 }
 
 /**
