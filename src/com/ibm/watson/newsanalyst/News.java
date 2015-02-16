@@ -108,6 +108,7 @@ public class News {
 		RSSReader readerReutersUs = new RSSReader(RSSReader.REUTERS_RSS_URL_US);
 		List<SyndEntry> entriesReutersUs = readerReutersUs.getFeedEntries();
 		entriesAll.addAll(entriesReutersUs);
+		
 			
 		// list of news items
 		List<NewsItem> news = new ArrayList<NewsItem>();

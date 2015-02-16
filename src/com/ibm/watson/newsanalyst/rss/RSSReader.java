@@ -21,12 +21,13 @@ import com.rometools.rome.io.FeedException;
  */
 public class RSSReader {
 	
-	public static final String AP_RSS_URL_WORLD_OLD = "http://hosted.ap.org/lineups/WORLDHEADS.rss?SITE=AP&SECTION=HOME";
 	public static final String AP_RSS_URL_WORLD = "http://hosted2.ap.org/atom/APDEFAULT/cae69a7523db45408eeb2b3a98c0c9c5";
 	public static final String AP_RSS_URL_TOP = "http://hosted2.ap.org/atom/APDEFAULT/3d281c11a96b4ad082fe88aa0db04305";
 	public static final String AP_RSS_URL_US = "http://hosted2.ap.org/atom/APDEFAULT/386c25518f464186bf7a2ac026580ce7";
 	public static final String REUTERS_RSS_URL_US = "http://feeds.reuters.com/Reuters/domesticNews";
 	public static final String REUTERS_RSS_URL_WORLD = "http://feeds.reuters.com/reuters/topNews";
+	public static final String BBC_RSS_URL_WORLD = "http://feeds.bbci.co.uk/news/world/rss.xml?edition=us";
+	public static final String US_REPORT_RSS_URL_NATION_WORLD = "http://www.usnews.com/rss/news";
 	
 	
 	private static final FeedFetcherCache feedInfoCache = HashMapFeedInfoCache.getInstance();
